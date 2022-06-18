@@ -1,0 +1,46 @@
+.signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6f1eb;
+}
+
+.signIn .login {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.signIn .login .id_pw_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.signIn .login .id_pw_input input {
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: 4px solid #f37021;
+    outline: none;
+    font-size: 18px;
+}
+
+.signIn .login .inflow {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f37021;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    border: 4px solid #edb54c;
+}
+
+.signIn .login .find_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
