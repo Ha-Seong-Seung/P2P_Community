@@ -1,4 +1,5 @@
 import '../../css/signIn.css';
+import { Link } from 'react-router-dom';
 
 function signIn() {
   return (
@@ -11,9 +12,11 @@ function signIn() {
         <div className='login_button inflow'>
           <span>로그인</span>
         </div>
-        <div className='join_button inflow'>
-          <span>회원가입</span>
-        </div>
+        <Link to="signUp">
+          <div className='join_button inflow'>
+            <span>회원가입</span>
+          </div>
+        </Link>
         <div className='find_info'>
           <div className='find_id'>아이디 찾기</div>
           <div className='find_pw'>비밀번호 찾기</div>
