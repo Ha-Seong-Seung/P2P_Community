@@ -1,9 +1,11 @@
 import '../../css/signUp.css';
 import { Link } from 'react-router-dom';
+import p2pimg from '../../img/p2pimg.png'
 
 function signUp() {
-  return (
+    return (
     <div className='signUp'>
+        <img src={p2pimg} style={{width: '200px', marginBottom: '20px'}}/>
         <div className='signUp_flow'>
             <div className='signUp_input'>
                 <div className='id_input double_check'>
