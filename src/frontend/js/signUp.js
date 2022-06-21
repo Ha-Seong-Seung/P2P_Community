@@ -1,11 +1,13 @@
 import '../../css/signUp.css';
 import { Link } from 'react-router-dom';
-import p2pimg from '../../img/p2pimg.png'
+import p2pimg from '../../img/p2p-logo.png'
 
 function signUp() {
     return (
     <div className='signUp'>
-        <img src={p2pimg} style={{width: '200px', marginBottom: '20px'}}/>
+        <Link to="/">
+            <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}}/>
+        </Link>
         <div className='signUp_flow'>
             <div className='signUp_input'>
                 <div className='id_input double_check'>
@@ -22,11 +24,9 @@ function signUp() {
                 <input type='text' placeholder='이름' />
                 <input type='text' placeholder='닉네임' />
             </div>
-            <Link to="signUp">
-                <div className='signUp_button'>
-                    <span>회원가입</span>
-                </div>
-            </Link>
+            <div className='signUp_button'>
+                <span>회원가입</span>
+            </div>
         </div>
     </div>
   );

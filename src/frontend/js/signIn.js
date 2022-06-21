@@ -1,11 +1,11 @@
 import '../../css/signIn.css';
 import { Link } from 'react-router-dom';
-import p2pimg from '../../img/p2pimg.png'
+import p2pimg from '../../img/p2p-logo.png'
 
 function signIn() {
   return (
     <div className='signIn'>
-      <img src={p2pimg} style={{width: '200px', marginBottom: '20px'}}/>
+      <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}}/>
       <div className='login'>
         <div className='id_pw_input'>
           <input type='text' placeholder='아이디'/>

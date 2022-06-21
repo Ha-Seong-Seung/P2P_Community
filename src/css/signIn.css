@@ -1,10 +1,31 @@
+/* :root {
+    --primary: #f37021;
+    --secondary: #edb54c;
+    --bg-color: #f6f1eb;
+} */
+/* :root {
+    --primary: #17a74e;
+    --secondary: #A6D668;
+    --bg-color: #ebf6eb;
+} */
+/* :root {
+    --primary: #8a30b4;
+    --secondary: #9a6ae7;
+    --bg-color: #f3ebf6;
+} */
+:root {
+    --primary: #1766a7;
+    --secondary: #72a8e7;
+    --bg-color: #eaf1f5;
+}
+
 .signIn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f6f1eb;
+    background-color: var(--bg-color);
 }
 
 .signIn .login {
@@ -22,7 +43,7 @@
     height: 50px;
     padding: 0 10px;
     margin-bottom: 10px;
-    border: 4px solid #f37021;
+    border: 4px solid var(--primary);
     outline: none;
     font-size: 18px;
 }
@@ -32,11 +53,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#f37021;
-    margin-bottom: 10px;
+    background-color:var(--primary);
     color: white;
     font-size: 18px;
-    border: 4px solid #edb54c;
+    border: 4px solid var(--secondary);
 }
 
 .signIn .login .find_info {
@@ -47,4 +67,5 @@
 
 .signIn .login a {
     text-decoration : none;
+    margin: 10px 0;
 }
