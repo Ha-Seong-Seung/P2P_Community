@@ -1,0 +1,9 @@
+FROM mariadb:latest
+
+ARG MYSQL_CONTAINER_USER
+ARG MYSQL_CONTAINER_GROUP
+
+COPY my.cnf /etc/mysql/my.cnf
+
+RUN usermod -u 1000 ${MYSQL_CONTAINER_USER} \
+ && groupmod -g 1000 ${MYSQL_CONTAINER_GROUP}
