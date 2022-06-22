@@ -1,0 +1,15 @@
+.board_write {
+  background-color: var(--bg-color);
+  display: flex;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.board_write .write {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
