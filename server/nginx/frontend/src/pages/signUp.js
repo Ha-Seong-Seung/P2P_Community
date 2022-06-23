@@ -1,6 +1,6 @@
 import '../css/signUp.css';
 import { Link } from 'react-router-dom';
-import p2pimg from '../../img/p2p-logo.png'
+import p2pimg from '../img/p2p-logo.png'
 
 function signUp() {
     return (
