@@ -1,4 +1,4 @@
-import '../../css/layout.css';
+import '../css/layout.css';
 import Header from "./header";
 
 function layout() {

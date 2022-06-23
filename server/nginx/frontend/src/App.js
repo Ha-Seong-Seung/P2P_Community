@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import SignIn from "./frontend/js/signIn.js";
-import SignUp from "./frontend/js/signUp.js";
-import Main from "./frontend/js/main.js";
-import BoardWrite from "./frontend/js/board_write.js";
+import SignIn from "./pages/signIn.js";
+import SignUp from "./pages/signUp.js";
+import Main from "./pages/main.js";
+import BoardWrite from "./pages/board_write.js";
 
 function App() {
   return (

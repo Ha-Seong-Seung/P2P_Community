@@ -1,5 +1,5 @@
-import p2pimg from '../../img/p2p_blue.png'
-import '../../css/header.css'
+import p2pimg from '../img/p2p_blue.png'
+import '../css/header.css'
 
 function header() {
   return (

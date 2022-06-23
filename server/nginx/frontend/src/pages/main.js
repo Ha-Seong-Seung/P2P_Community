@@ -1,6 +1,6 @@
-import '../../css/main.css';
+import '../css/main.css';
 import Header from "../components/header";
-import profile from '../../img/profile.png'
+import profile from '../img/profile.png'
 
 function main() {
   return (

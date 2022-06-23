@@ -1,0 +1,75 @@
+version: '3'
+services:
+    p2p_community_server:
+        image: ${PROJECT_NAME}_server
+        container_name: ${PROJECT_NAME}_server
+        build:
+            context: ./server/nginx
+        ports: 
+            - ${NGINX_EXPOSED_PORT}:80
+            - "443:443"
+        extra_hosts:
+            - ${CDN_DOMAIN}:${LOCAL_IP}
+            - ${MAIN_DOMAIN}:${LOCAL_IP}
+            - ${WWW_MAIN_DOMAIN}:${LOCAL_IP}
+        volumes:
+            - ./server/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./server/nginx/sites-available:/etc/nginx/sites-available
+            - ./server/nginx/build:/etc/nginx/html
+            - ./logs/nginx:/var/log/nginx
+            - ./server/nginx/certificates:/etc/cert
+        depends_on:
+            - ${PROJECT_NAME}_mariadb
+            - ${PROJECT_NAME}_redis
+        links:
+            - ${PROJECT_NAME}_mariadb
+            - ${PROJECT_NAME}_redis
+        networks:
+            - ${NETWORK_NAME}
+        restart: always
+
+    p2p_community_redis:
+        image: ${PROJECT_NAME}_redis
+        container_name: ${PROJECT_NAME}_redis
+        build:
+            context: ./server/redis
+        command: redis-server --port ${REDIS_PORT} --requirepass ${REDIS_PASSWORD}
+        environment:
+            - REQUIREPASS=${REDIS_PASSWORD}
+            - CLIENTPORT=${REDIS_PORT}
+            - REDIS_EXPOSED_PORT=${REDIS_EXPOSED_PORT}
+            - REDIS_LOG_DIR=${REDIS_LOG_DIR}
+        volumes:
+            - ./data/redis-data:/data
+        networks:
+            - ${NETWORK_NAME}
+        restart: always
+
+    p2p_community_mariadb:
+        image: ${PROJECT_NAME}_mariadb
+        container_name: ${PROJECT_NAME}_mariadb
+        build:
+            context: ./server/mariadb
+            args:
+                - MYSQL_CONTAINER_USER=${DB_CONTAINER_USER}
+                - MYSQL_CONTAINER_GROUP=${DB_CONTAINER_GROUP}
+        volumes:
+            - ./logs/mariadb:${MYSQL_LOG_DIR}
+            - ./data/database:${MYSQL_DATA_DIR}:rw
+        environment:
+            - MYSQL_CONTAINER_USER=${DB_CONTAINER_USER}
+            - MYSQL_CONTAINER_GROUP=${DB_CONTAINER_GROUP}
+            - MYSQL_DATABASE=${DB_NAME}
+            - MYSQL_USER=${DB_USER}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+        ports:
+            - ${MYSQL_EXPOSED_PORT}:3306
+        networks:
+            - ${NETWORK_NAME}
+        restart: always
+
+networks:
+    p2pcommunity:
+        external: true
+        driver: bridge

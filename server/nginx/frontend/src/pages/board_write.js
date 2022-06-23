@@ -1,4 +1,4 @@
-import '../../css/board_write.css';
+import '../css/board_write.css';
 import Header from "../components/header";
 
 function board_write() {
