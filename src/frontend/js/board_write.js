@@ -7,7 +7,7 @@ function board_write() {
       <Header />
       <div className='write'>
         <span>제목</span>
-        <input type='text'></input>
+        <input type='text' id='title' ></input>
         <span>카테고리</span>
         <select name="category">
             <option value="">카테고리</option>
@@ -15,14 +15,14 @@ function board_write() {
             <option value="투자결산">투자결산</option>
         </select>
         <span>내용</span>
-        <input type='text'></input>
+        <textarea id='content' />
         <form method='post'>
           <div>
             <label for='chooseFile'>
               클릭
             </label>
           </div>
-          <input type='file' id='chooseFile' name='chooseFile' accept='image/*'></input>
+          <input type='file' id='chooseFile' name='chooseFile' accept='image/*' style={{display:'none'}}></input>
         </form>
         <div className='submit_cancle'>
           <div className='submit_button'>

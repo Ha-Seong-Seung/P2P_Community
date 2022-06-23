@@ -11,5 +11,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 580px;
+}
+
+.board_write .write span {
+  font-size: 18px;
+}
+
+.board_write .write #chooseFile#file-upload-button {
+  /* width: 580px; */
+  display: none;
+}
+
+.board_write .write #content {
+  min-height: 50px;
+  display: flex;
 }
