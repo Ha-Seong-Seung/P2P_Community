@@ -4,6 +4,7 @@
   padding-top: 80px;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -11,7 +12,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 580px;
+  width: 540px;
+  background-color: white;
+  height: 500px;
+  box-shadow: 3px 3px 0px 0px rgb(0 0 6 / 9%);
+  padding: 40px;
+  border: 1px solid #dadada;
 }
 
 .board_write .write span {
@@ -20,10 +26,91 @@
 
 .board_write .write #chooseFile#file-upload-button {
   /* width: 580px; */
-  display: none;
+  /* display: none; */
+}
+
+.board_write .board_input {
+  padding: 0 5px;
+  margin-bottom: 10px;
+  /* border: 4px solid var(--secondary); */
+  border: 1px solid #dadada;
+  outline: none;
+  font-size: 16px;
+  height: 35px;
+}
+.board_write .write form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.board_write .write form .label_box {
+  margin-right: 20px;
+}
+
+.board_write .write form span {
+  font-size: 15px;
+  color: #404040;
+}
+
+.board_write .write #file_button {
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  display: flex;
+  background-color: var(--primary);
+  margin: auto;
+  color: white;
+  padding: 0 5px;
+  box-shadow: 3px 3px 0px 0px rgb(0 0 6 / 9%);
+  cursor: pointer;
 }
 
 .board_write .write #content {
   min-height: 50px;
   display: flex;
+  height: 300px;
+  padding: 5px;
+}
+
+.board_write input {
+  border-style: none;
+}
+
+.board_write select {
+  border-style: none;
+}
+
+.board_write textarea {
+  border-style: none;
+  resize: none;
+}
+
+.board_write .write .submit_cancle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.board_write .write .submit_cancle div {
+  display: flex;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background-color: var(--primary);
+  color: white;
+  padding: 0 5px;
+  box-shadow: 3px 3px 0px 0px rgb(0 0 6 / 9%);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.board_write .write .submit_cancle div span {
+  font-size: 16px;
+}
+
+.board_write .write .submit_cancle .submit_button {
+  margin-right: 10px;
 }
