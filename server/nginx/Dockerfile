@@ -8,6 +8,7 @@ COPY sites-available .
 WORKDIR /etc/nginx/sites-enabled
 RUN ln -s /etc/nginx/sites-available/p2pcommunity.com.conf /etc/nginx/sites-enabled/
 RUN ln -s /etc/nginx/sites-available/cdn.p2pcommunity.com.conf /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/api.p2pcommunity.com.conf /etc/nginx/sites-enabled/
 
 RUN apt-get update
 

@@ -12,6 +12,7 @@ services:
             - ${CDN_DOMAIN}:${LOCAL_IP}
             - ${MAIN_DOMAIN}:${LOCAL_IP}
             - ${WWW_MAIN_DOMAIN}:${LOCAL_IP}
+            - ${API_DOMAIN}:${LOCAL_IP}
         volumes:
             - ./server/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./server/nginx/sites-available:/etc/nginx/sites-available
@@ -65,6 +66,32 @@ services:
             - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
         ports:
             - ${MYSQL_EXPOSED_PORT}:3306
+        networks:
+            - ${NETWORK_NAME}
+        restart: always
+
+    p2p_community_service_account:
+        image: ${PROJECT_NAME}_service_account
+        container_name: ${PROJECT_NAME}_service_account
+        build:
+            context: ${SERVICE_ACCOUNT_REAL_DIR}
+            args:
+                - WORKING_DIR=${SERVICE_ACCOUNT_DIR}
+                - SERVER_ENVIRONMENT=${SERVER_ENVIRONMENT}
+            target: ${SERVER_ENVIRONMENT}
+        working_dir: ${SERVICE_ACCOUNT_DIR}
+        ports: 
+            - ${SERVICE_ACCOUNT_PORT}:${SERVICE_ACCOUNT_PORT}
+        volumes:
+            - ${SERVICE_ACCOUNT_REAL_DIR}:${SERVICE_ACCOUNT_DIR}
+            - ${SERVICE_ACCOUNT_DIR}/node_modules
+            - ${SERVICE_DIR}/.env:${SERVICE_ACCOUNT_DIR}/.env
+        links:
+            - ${PROJECT_NAME}_mariadb
+            - ${PROJECT_NAME}_redis
+        depends_on:
+            - ${PROJECT_NAME}_mariadb
+            - ${PROJECT_NAME}_redis
         networks:
             - ${NETWORK_NAME}
         restart: always
