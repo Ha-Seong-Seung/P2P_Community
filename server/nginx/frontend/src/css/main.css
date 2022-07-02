@@ -16,7 +16,7 @@
   width: 580px;
   max-height: 530px;
   /* height: auto; */
-  border: 1px solid #dadada;
+  border: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
   box-shadow: 6px 7px 0px 0px rgb(0 0 0 / 9%);
 }

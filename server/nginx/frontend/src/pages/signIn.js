@@ -5,7 +5,7 @@ import p2pimg from '../img/p2p-logo.png'
 function signIn() {
   return (
     <div className='signIn'>
-      <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}}/>
+      <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}} alt = "p2pimg"/>
       <div className='login'>
         <div className='id_pw_input'>
           <input type='text' placeholder='아이디'/>

@@ -6,7 +6,7 @@ function header() {
   return (
     <div className='header'>
       <Link to="/main">
-        <img src={p2pimg} style={{width: '50px'}}/>
+        <img src={p2pimg} style={{width: '50px'}}  alt = "p2pimg"/>
       </Link>
       <div className='quick'>
         <span>검색</span>

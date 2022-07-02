@@ -6,7 +6,7 @@ function signUp() {
     return (
     <div className='signUp'>
         <Link to="/">
-            <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}}/>
+            <img src={p2pimg} style={{width: '250px', marginBottom: '20px'}} alt = "p2pimg"/>
         </Link>
         <div className='signUp_flow'>
             <div className='signUp_input'>

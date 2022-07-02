@@ -10,7 +10,7 @@ function main() {
         <div className='card'>
           <div className='card_header'>
             <div className='card_header_left'>
-              <img src={profile} style={{width: '50px', height: '50px'}}/>
+              <img src={profile} style={{width: '50px', height: '50px'}} alt = "profile"/>
               <div className='user_info'>
                 <span>하리보</span>
                 <span id='time'>22.6.21 14:14</span>
@@ -30,7 +30,7 @@ function main() {
         <div className='card'>
           <div className='card_header'>
             <div className='card_header_left'>
-              <img src={profile} style={{width: '50px', height: '50px'}}/>
+              <img src={profile} style={{width: '50px', height: '50px'}} alt = "profile"/>
               <div className='user_info'>
                 <span>하리보</span>
                 <span id='time'>22.6.21 14:14</span>
@@ -50,7 +50,7 @@ function main() {
         <div className='card'>
           <div className='card_header'>
             <div className='card_header_left'>
-              <img src={profile} style={{width: '50px', height: '50px'}}/>
+              <img src={profile} style={{width: '50px', height: '50px'}} alt = "profile"/>
               <div className='user_info'>
                 <span>하리보</span>
                 <span id='time'>22.6.21 14:14</span>

@@ -5,7 +5,7 @@
   align-items: center;
   position: fixed;
   background-color: #fff;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid var(--border-color);
   height: 80px;
   top: 0;
   left: 0;
