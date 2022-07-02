@@ -1,11 +1,10 @@
 .my_page {
     background-color: var(--bg-color);
     display: flex;
-    padding-top: 80px;
-    display: flex;
+    padding-top: 12vh;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 88vh;
     flex-direction: column;
 }
 

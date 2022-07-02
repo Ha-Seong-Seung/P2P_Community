@@ -1,11 +1,10 @@
 .board_write {
   background-color: var(--bg-color);
   display: flex;
-  padding-top: 80px;
-  display: flex;
+  padding-top: 12vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 88vh;
 }
 
 .board_write .write {
