@@ -1,0 +1,9 @@
+diff a/server/nginx/frontend/src/components/header.js b/server/nginx/frontend/src/components/header.js	(rejected hunks)
+@@ -6,7 +6,6 @@
+   return (
+     <div className='header'>
+       <Link to="/main">
+-        <img src={p2pimg} style={{width: '50px'}}/>
+         <img src={p2pimg} style={{width: '50px'}}  alt = "p2pimg"/>
+       </Link>
+       <div className='quick'>

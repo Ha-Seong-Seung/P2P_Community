@@ -1,5 +1,6 @@
 PROJECT_NAME=
 NETWORK_NAME=
+SERVER_ENVIRONMENT=production
 
 NGINX_EXPOSED_PORT=80
 NGINX_ROOT_DIR=/usr/share/nginx
@@ -26,4 +27,11 @@ REDIS_LOG_DIR=/data/redis.log
 CDN_DOMAIN=cdn.p2pcommunity.com
 MAIN_DOMAIN=p2pcommunity.com
 WWW_MAIN_DOMAIN=www.p2pcommunity.com
+API_DOMAIN=api.p2pcommunity.com
 LOCAL_IP=127.0.0.1
+
+SERVICE_DIR=./services
+
+SERVICE_ACCOUNT_PORT=
+SERVICE_ACCOUNT_DIR=${WEB_ROOT}/account
+SERVICE_ACCOUNT_REAL_DIR=${SERVICE_DIR}/account
