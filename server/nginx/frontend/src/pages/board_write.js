@@ -1,9 +1,14 @@
 import "../css/board_write.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 
 function Board_write() {
   const [fileName, setFileName] = useState("선택된 파일이 없습니다.");
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    ScreenSize();
+  }, []);
 
   // 첨부 파일 명 가져오는 코드
   const fileUpload = () => {
@@ -19,8 +24,16 @@ function Board_write() {
     }
   };
 
+  // 높이 헤더포함해서 100%로 지정해주는 함수
+  const ScreenSize = () => {
+    setWindowHeight(document.documentElement.clientHeight - 80);
+  };
+
+  // 윈도우 사이즈 변경할 때마다 사이즈 조정
+  window.addEventListener("resize", () => ScreenSize());
+
   return (
-    <div className="board_write">
+    <div className="board_write" style={{ height: windowHeight }}>
       <Header />
       <div className="write">
         <span>제목</span>

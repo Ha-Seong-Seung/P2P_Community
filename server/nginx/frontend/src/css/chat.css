@@ -1,9 +1,8 @@
 .chat {
     background-color: var(--bg-color);
     display: flex;
-    padding-top: 12vh;
+    padding-top: 80px;
     justify-content: center;
-    min-height: 88vh;
   }
 
 .chat .my_chat {
