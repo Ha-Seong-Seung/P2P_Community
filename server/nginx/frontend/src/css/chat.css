@@ -18,6 +18,18 @@
     max-height: 70vh;
 }
 
+.chat .my_chat .chat_list_top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: -5px 6px 14px -10px rgb(144 144 144 / 18%);
+}
+
+.chat .my_chat .chat_list_top span {
+    font-size: 20px;
+}
+
 .chat .my_chat .chat_list_contents {
     height: 60vh;
     overflow: scroll;
@@ -26,6 +38,8 @@
 .chat .my_chat .chat_list_contents .chat_other {
     display: flex;
     align-items: center;
+    padding: 5px 0;
+    border: 1px solid #dadada;
 }
 
 .chat .my_chat .chat_list_contents .chat_other img {
@@ -33,9 +47,33 @@
     height: 50px;
     border-radius: 50%;
     border: 1px solid var(--border-color);
+    margin: 5px 0px 5px 15px;
 }
+
 .chat .my_chat .chat_list_contents .chat_other .chat_info {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.chat .my_chat .chat_list_contents .chat_other .chat_info .chat_contents {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.chat .my_chat .chat_list_contents .chat_other span {
+    font-size: 16px;
+    color: rgb(85, 85, 85);
+}
+
+.chat .my_chat .chat_list_contents .chat_other .chat_info .chat_contents span {
+    font-size: 16px;
+    color: rgb(85, 85, 85);
+}
+
+.chat .my_chat .chat_list_contents .chat_other .chat_info .chat_contents #nickname {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 3px;
 }
